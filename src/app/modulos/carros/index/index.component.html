@@ -1,31 +1,33 @@
 <a routerLink="/carros/crear" class="btn">
   Crear Carro
 </a>
-<table class="striped">
-  <thead>
-    <tr>
-      <th>Placa</th>
-      <th>Color</th>
-      <th>Marca</th>
-      <th>Modelo</th>
-      <th>Año</th>
-      <th>Imagen</th>
-      <th>Acción</th>
-    </tr>
-  </thead>
+<h2>Responsive Table</h2>
+<div class="table-wrapper">
+  <table class="fl-table">
+    <thead>
+      <tr>
+        <th>Placa</th>
+        <th>Color</th>
+        <th>Marca</th>
+        <th>Modelo</th>
+        <th>Año</th>
+        <th>Imagen</th>
+        <th>Acción</th>
+      </tr>
+    </thead>
 
-  <tbody>
-    <tr *ngFor="let carro of carros">
-      <td>{{carro.placa}}</td>
-      <td>{{carro.color}}</td>
-      <td>{{carro.marca}}</td>
-      <td>{{carro.modelo}}</td>
-      <td>{{carro.anio}}</td>
-      <td><img src="{{carro.imagen}}" alt="imagen"></td>
-      <td>
-        <a routerLink="/carros/editar/{{carro.id}}" class="btn #0d47a1 blue darken-4"> Editar </a>
-        <button (click)="eliminarCarro(carro.id)" class="btn #b71c1c red darken-4"> Eliminar  </button>        
-      </td>
-    </tr>
-  </tbody>
-</table>
+    <tbody>
+      <tr *ngFor="let carro of carros">
+        <td>{{carro.placa}}</td>
+        <td>{{carro.color}}</td>
+        <td>{{carro.marca}}</td>
+        <td>{{carro.modelo}}</td>
+        <td>{{carro.anio}}</td>
+        <td><img src="{{carro.imagen}}" alt="imagen"></td>
+        <td>
+          <a routerLink="/carros/editar/{{carro.id}}" class="btn #0d47a1 blue darken-4"> Editar </a>
+          <button (click)="eliminarCarro(carro.id)" class="btn #b71c1c red darken-4"> Eliminar </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>

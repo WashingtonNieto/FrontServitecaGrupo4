@@ -1,0 +1,38 @@
+<div class="section container">
+  <div class="card-action #0d47a1 #1565c0 blue darken-3 white-text ">
+    <h3>Actualizar Cliente</h3>
+  </div>
+<div class="row">
+  <form [formGroup]= "fgValidator" class="col s12">
+      <input type="hidden" id="id" formControlName="id">
+
+      <div class="row card-panel">
+
+        <div class="form-field col s12">
+          <label for="identificacion">Identificacion</label>
+          <input type="text" id="placa" formControlName="identificacion" class="validate" required>
+        </div>
+
+        <div class="form-field col s12">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" formControlName="nombre" class="validate" required>
+        </div>
+
+        <div class="form-field col s12">
+          <label for="telefono">Telefono</label>
+          <input type="text" id="telefono" formControlName="telefono" class="validate" required>
+        </div>
+
+        <div class="form-field col s12">
+          <label for="correo">Correo</label>
+          <input type="text" id="correo" formControlName="correo" class="validate" required>
+        </div>
+
+        <button [disabled]="!fgValidator.valid" (click)= "actualizarCliente()"class="btn-large" style="width:100%;">
+          Actualizar
+        </button>
+
+        </div>
+    </form>
+  </div>
+</div>

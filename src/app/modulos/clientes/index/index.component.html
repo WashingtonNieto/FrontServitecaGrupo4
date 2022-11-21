@@ -1,1 +1,30 @@
-<p>index works!</p>
+<a routerLink="/clientes/crear" class="btn">
+  Crear Cliente
+</a>
+<h2>CLIENTES</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+  <thead>
+    <tr>
+      <th>identificacion</th>
+      <th>nombre</th>
+      <th>telefono</th>
+      <th>correo</th>
+      <th>Acción</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{cliente.identificacion}}</td>
+      <td>{{cliente.nombre}}</td>
+      <td>{{cliente.telefono}}</td>
+      <td>{{cliente.correo}}</td>
+      <td>
+        <a routerLink="/clientes/editar/{{cliente.id}}" class="btn #0d47a1 blue darken-4"> Editar </a>
+        <button (click)="eliminarCliente(cliente.id)" class="btn #b71c1c red darken-4"> Eliminar  </button>        
+
+      </td>
+    </tr>
+  </tbody>
+</table>
