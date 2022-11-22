@@ -4,6 +4,7 @@ import { CerrarSesionComponent } from './cerrar-sesion/cerrar-sesion.component';
 import { IniciarSesionComponent } from './iniciar-sesion/iniciar-sesion.component';
 
 const routes: Routes = [
+  // {path: 'identificar',component: IdentificacionComponent},
   {path: 'login',component: IniciarSesionComponent},
   {path: 'logout',component: CerrarSesionComponent}
 ];
